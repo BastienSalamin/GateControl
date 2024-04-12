@@ -66,6 +66,16 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Messages\access.csv" />
+    <None Include="Messages\fullAccess.csv" />
+    <None Include="Messages\pinAnswer.csv" />
+    <None Include="Messages\pinControl.csv" />
+    <None Include="Messages\userID.csv" />
+    <None Include="Messages\demandeHeures.csv" />
+    <None Include="Messages\workTime.csv" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />
 </Project>
