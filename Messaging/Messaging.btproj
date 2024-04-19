@@ -68,6 +68,22 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Map Include="StartBadgeMaker_to_Access.btm">
+      <TypeName>StartBadgeMaker_to_Access</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Schema Include="StartBadgeMaker.xsd">
+      <TypeName>StartBadgeMaker</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="Access.xsd">
+      <TypeName>Access</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Content Include="Messages\startBadgeMaker.txt" />
     <None Include="Messages\access.csv" />
     <None Include="Messages\fullAccess.csv" />
     <None Include="Messages\pinAnswer.csv" />
