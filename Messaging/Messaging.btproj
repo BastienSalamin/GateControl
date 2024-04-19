@@ -68,11 +68,21 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Map Include="StartBadgeMaker_to_UserID.btm">
+      <TypeName>StartBadgeMaker_to_UserID</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </Map>
     <Map Include="StartBadgeMaker_to_Access.btm">
       <TypeName>StartBadgeMaker_to_Access</TypeName>
       <Namespace>Messaging</Namespace>
       <SubType>Task</SubType>
     </Map>
+    <Schema Include="UserID.xsd">
+      <TypeName>UserID</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
     <Schema Include="StartBadgeMaker.xsd">
       <TypeName>StartBadgeMaker</TypeName>
       <Namespace>Messaging</Namespace>
