@@ -32,7 +32,14 @@
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>GateControl.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.BizTalk.Pipeline.Components, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
@@ -68,6 +75,41 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Pipeline Include="SendUserIDPin.btp">
+      <TypeName>SendUserIDPin</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </Pipeline>
+    <Pipeline Include="ReceiveUserID.btp">
+      <TypeName>ReceiveUserID</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </Pipeline>
+    <Map Include="UserID_to_UserIDPin.btm">
+      <TypeName>UserID_to_UserIDPin</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Schema Include="UserIDPin.xsd">
+      <TypeName>UserIDPin</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Pipeline Include="SendAccess.btp">
+      <TypeName>SendAccess</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </Pipeline>
+    <Pipeline Include="SendUserID.btp">
+      <TypeName>SendUserID</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </Pipeline>
+    <Pipeline Include="ReceiveStartBadgeMaker.btp">
+      <TypeName>ReceiveStartBadgeMaker</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </Pipeline>
     <Map Include="StartBadgeMaker_to_UserID.btm">
       <TypeName>StartBadgeMaker_to_UserID</TypeName>
       <Namespace>Messaging</Namespace>
@@ -94,10 +136,12 @@
       <SubType>Task</SubType>
     </Schema>
     <Content Include="Messages\startBadgeMaker.txt" />
+    <None Include="GateControl.snk" />
     <None Include="Messages\access.csv" />
     <None Include="Messages\fullAccess.csv" />
     <None Include="Messages\pinAnswer.csv" />
     <None Include="Messages\pinControl.csv" />
+    <None Include="Messages\userIDPin.csv" />
     <None Include="Messages\userID.csv" />
     <None Include="Messages\demandeHeures.csv" />
     <None Include="Messages\workTime.csv" />
