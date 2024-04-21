@@ -75,6 +75,11 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Schema Include="WorkTime.xsd">
+      <TypeName>WorkTime</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
     <Pipeline Include="SendUserIDPin.btp">
       <TypeName>SendUserIDPin</TypeName>
       <Namespace>Messaging</Namespace>
@@ -135,7 +140,17 @@
       <Namespace>Messaging</Namespace>
       <SubType>Task</SubType>
     </Schema>
+    <Map Include="DemandeHeure _to_WorkTime.btm">
+      <TypeName>DemandeHeure_to_WorkTime</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </Map>
     <Content Include="Messages\startBadgeMaker.txt" />
+    <Schema Include="DemandeHeure.xsd">
+      <TypeName>DemandeHeure</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
     <None Include="GateControl.snk" />
     <None Include="Messages\access.csv" />
     <None Include="Messages\fullAccess.csv" />
