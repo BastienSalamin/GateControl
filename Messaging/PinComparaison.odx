@@ -1,0 +1,359 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="9db88f74-eac1-46e1-858b-d89d7b8db6fd" LowerBound="1.1" HigherBound="76.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="Messaging" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="ServiceDeclaration" OID="c2b131b4-0ca7-4756-9f88-ebd5b10d0c3a" ParentLink="Module_ServiceDeclaration" LowerBound="29.1" HigherBound="75.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PinComparaison" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="ServiceBody" OID="2935d964-dabc-458d-a009-434a52b11513" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Parallel" OID="4fac88e1-053e-4b1e-a064-47c98d26fc42" ParentLink="ServiceBody_Statement" LowerBound="44.1" HigherBound="58.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ParallelActions" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="ParallelBranch" OID="e37c3779-7948-4482-aa99-f8b9d20c45fd" ParentLink="ReallyComplexStatement_Branch" LowerBound="49.1" HigherBound="51.1">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="ParallelBranch_1" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Receive" OID="88728781-5dc0-48d0-9a1c-5616887e4b3e" ParentLink="ComplexStatement_Statement" LowerBound="49.1" HigherBound="51.1">
+                            <om:Property Name="Activate" Value="True" />
+                            <om:Property Name="PortName" Value="ReceiveUserIDPinFile" />
+                            <om:Property Name="MessageName" Value="Message_UserIDPin" />
+                            <om:Property Name="OperationName" Value="Operation_UserIDPin" />
+                            <om:Property Name="OperationMessageName" Value="PortUserIDPin" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Receive_UserIDPin" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="ParallelBranch" OID="bf066fd5-d1a8-4d40-9d5a-c14a4e9913de" ParentLink="ReallyComplexStatement_Branch" LowerBound="54.1" HigherBound="56.1">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="ParallelBranch_2" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Receive" OID="c463deb3-8722-4b9e-aa53-96491e643c77" ParentLink="ComplexStatement_Statement" LowerBound="54.1" HigherBound="56.1">
+                            <om:Property Name="Activate" Value="True" />
+                            <om:Property Name="PortName" Value="ReceivePinControlFile" />
+                            <om:Property Name="MessageName" Value="Message_PinControl" />
+                            <om:Property Name="OperationName" Value="Operation_PinControl" />
+                            <om:Property Name="OperationMessageName" Value="PortPinControl" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Receive_PinControl" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Scope" OID="b053442d-0efe-4446-bb96-130b6eaa5fd4" ParentLink="ServiceBody_Statement" LowerBound="58.1" HigherBound="71.1">
+                    <om:Property Name="InitializedTransactionType" Value="True" />
+                    <om:Property Name="IsSynchronized" Value="False" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ScopeProcessing" />
+                    <om:Property Name="Signal" Value="False" />
+                    <om:Element Type="Construct" OID="d50fc5d2-2cf0-4fcd-abd1-fb33540fbf99" ParentLink="ComplexStatement_Statement" LowerBound="63.1" HigherBound="69.1">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Construct_PinAnswer" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Transform" OID="07782770-2cb6-422b-8480-efc8f59ebca5" ParentLink="ComplexStatement_Statement" LowerBound="66.1" HigherBound="68.1">
+                            <om:Property Name="ClassName" Value="Messaging.Transform_PinComparaison" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Mapping_to_PinAnswer" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="MessagePartRef" OID="c4879699-52fd-4f5e-848a-9643fc254c8a" ParentLink="Transform_InputMessagePartRef" LowerBound="67.93" HigherBound="67.111">
+                                <om:Property Name="MessageRef" Value="Message_PinControl" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="MessagePartReference_1" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="MessagePartRef" OID="3e964852-f635-416c-9477-c41cc9a87b00" ParentLink="Transform_InputMessagePartRef" LowerBound="67.113" HigherBound="67.130">
+                                <om:Property Name="MessageRef" Value="Message_UserIDPin" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="MessagePartReference_2" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="MessagePartRef" OID="9b779020-759b-4755-b0ab-ee02e549defe" ParentLink="Transform_OutputMessagePartRef" LowerBound="67.36" HigherBound="67.53">
+                                <om:Property Name="MessageRef" Value="Message_PinAnswer" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="MessagePartReference_3" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="MessageRef" OID="06a69572-e42b-478f-bea2-fa727645015c" ParentLink="Construct_MessageRef" LowerBound="64.31" HigherBound="64.48">
+                            <om:Property Name="Ref" Value="Message_PinAnswer" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="3dae92ba-08f1-4c9d-93bc-96c982b8a1c0" ParentLink="ServiceBody_Statement" LowerBound="71.1" HigherBound="73.1">
+                    <om:Property Name="PortName" Value="SendOutputFile" />
+                    <om:Property Name="MessageName" Value="Message_PinAnswer" />
+                    <om:Property Name="OperationName" Value="Operation_PinAnswer" />
+                    <om:Property Name="OperationMessageName" Value="PortPinAnswer" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_PinAnswer" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="8a342136-2e4f-4e20-915f-872c19f1ef0a" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="39.1" HigherBound="40.1">
+                <om:Property Name="Type" Value="Messaging.UserIDPin" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Message_UserIDPin" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="199d6356-992c-474d-b39b-1566ad13a347" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="40.1" HigherBound="41.1">
+                <om:Property Name="Type" Value="Messaging.PinControl" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Message_PinControl" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="0c70dda3-41a6-4266-8cba-41953d24adf7" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="41.1" HigherBound="42.1">
+                <om:Property Name="Type" Value="Messaging.PinAnswer" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Message_PinAnswer" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="7bd5b9ec-ccb4-4cd2-b468-52c9ef2febcf" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="32.1" HigherBound="34.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Messaging.Receive_UserIDPin" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ReceiveUserIDPinFile" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="PhysicalBindingAttribute" OID="f3313e09-4873-4782-bf90-9a8560b30c21" ParentLink="PortDeclaration_CLRAttribute" LowerBound="32.1" HigherBound="33.1">
+                    <om:Property Name="InPipeline" Value="Messaging.ReceiveUserIDPin" />
+                    <om:Property Name="OutPipeline" Value="Microsoft.BizTalk.DefaultPipelines.XMLTransmit" />
+                    <om:Property Name="TransportType" Value="FILE" />
+                    <om:Property Name="URI" Value="C:\Projet\SAPOUT\UserIDPin*.csv" />
+                    <om:Property Name="IsDynamic" Value="False" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="8e2f56b6-2a4e-444a-84f6-2f82c3a5b0fa" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="34.1" HigherBound="36.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Messaging.Send_PinAnswer" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SendOutputFile" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="PhysicalBindingAttribute" OID="7cf0e049-e2ba-482b-bfc8-1e2491fe837d" ParentLink="PortDeclaration_CLRAttribute" LowerBound="34.1" HigherBound="35.1">
+                    <om:Property Name="InPipeline" Value="Microsoft.BizTalk.DefaultPipelines.XMLReceive" />
+                    <om:Property Name="OutPipeline" Value="Messaging.SendPinAnswer" />
+                    <om:Property Name="TransportType" Value="FILE" />
+                    <om:Property Name="URI" Value="C:\Projet\GateControlOUT\PinAnswer%MessageID%.csv" />
+                    <om:Property Name="IsDynamic" Value="False" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="2d3a03a3-e675-4b3d-bd3b-49204b493dbf" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="36.1" HigherBound="38.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Messaging.PortPinControl" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ReceivePinControlFile" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="PhysicalBindingAttribute" OID="ab363c6b-7555-46d0-9bc6-a5aa8041234d" ParentLink="PortDeclaration_CLRAttribute" LowerBound="36.1" HigherBound="37.1">
+                    <om:Property Name="InPipeline" Value="Messaging.ReceivePinControl" />
+                    <om:Property Name="OutPipeline" Value="Microsoft.BizTalk.DefaultPipelines.XMLTransmit" />
+                    <om:Property Name="TransportType" Value="FILE" />
+                    <om:Property Name="URI" Value="C:\Projet\SAPOUT\PinControl*.csv" />
+                    <om:Property Name="IsDynamic" Value="False" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="CorrelationDeclaration" OID="802356e4-5127-4798-b8e6-a4ffca38fb3e" ParentLink="ServiceDeclaration_CorrelationDeclaration" LowerBound="38.1" HigherBound="39.1">
+                <om:Property Name="Type" Value="Messaging.CorrelationType_1" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Correlation_1" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="StatementRef" OID="a3dfed32-e92c-4f2f-869c-4731017414c4" ParentLink="CorrelationDeclaration_StatementRef" LowerBound="50.100" HigherBound="50.124">
+                    <om:Property Name="Initializes" Value="True" />
+                    <om:Property Name="Ref" Value="88728781-5dc0-48d0-9a1c-5616887e4b3e" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="StatementRef_1" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="StatementRef" OID="79421b8c-2073-46a3-b381-d3f397e0a42f" ParentLink="CorrelationDeclaration_StatementRef" LowerBound="55.103" HigherBound="55.127">
+                    <om:Property Name="Initializes" Value="True" />
+                    <om:Property Name="Ref" Value="c463deb3-8722-4b9e-aa53-96491e643c77" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="StatementRef_2" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="76b5c4bd-9a42-46b7-8a64-865aefd92e88" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Receive_UserIDPin" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="4ed57f0f-3450-4e51-b0fa-b1cf302df2e8" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_UserIDPin" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="aaed33d6-c944-4f50-98ce-3f5f196d7780" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.22">
+                    <om:Property Name="Ref" Value="Messaging.UserIDPin" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="PortUserIDPin" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="c4e0716a-7a06-4bb9-90d3-205291ff31f3" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Send_PinAnswer" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="0103e2ba-2c2f-4059-bfd3-52a540e79421" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_PinAnswer" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="d5c16563-da43-4893-87b7-2f146a2ca4ae" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.22">
+                    <om:Property Name="Ref" Value="Messaging.PinAnswer" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="PortPinAnswer" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="47782b79-444d-4c77-b1ec-533f5795d703" ParentLink="Module_PortType" LowerBound="18.1" HigherBound="25.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortPinControl" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="e90e1d4b-545f-479e-8301-abe30201e30b" ParentLink="PortType_OperationDeclaration" LowerBound="20.1" HigherBound="24.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_PinControl" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="71a7d827-65e8-4689-aacc-8204590d75b1" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="22.13" HigherBound="22.23">
+                    <om:Property Name="Ref" Value="Messaging.PinControl" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="PortPinControl" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="CorrelationType" OID="04e00b23-a148-4979-b3b0-5e338ea397fe" ParentLink="Module_CorrelationType" LowerBound="25.1" HigherBound="29.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="CorrelationType_1" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PropertyRef" OID="e2aa282a-6ecb-4df0-8638-206211836ee3" ParentLink="CorrelationType_PropertyRef" LowerBound="27.9" HigherBound="27.27">
+                <om:Property Name="Ref" Value="Messaging.PropertySchema.UID" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PropertyRef_1" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module Messaging
+{
+    internal porttype Receive_UserIDPin
+    {
+        oneway Operation_UserIDPin
+        {
+            UserIDPin
+        };
+    };
+    internal porttype Send_PinAnswer
+    {
+        oneway Operation_PinAnswer
+        {
+            PinAnswer
+        };
+    };
+    internal porttype PortPinControl
+    {
+        oneway Operation_PinControl
+        {
+            PinControl
+        };
+    };
+    internal correlationtype CorrelationType_1
+    {
+        PropertySchema.UID
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service PinComparaison
+    {
+        [Microsoft.XLANGs.BaseTypes.PhysicalBinding("FILE", "C:\\Projet\\SAPOUT\\UserIDPin*.csv", typeof(Messaging.ReceiveUserIDPin))]
+        port implements Receive_UserIDPin ReceiveUserIDPinFile;
+        [Microsoft.XLANGs.BaseTypes.PhysicalBinding("FILE", "C:\\Projet\\GateControlOUT\\PinAnswer%MessageID%.csv", typeof(Messaging.SendPinAnswer))]
+        port uses Send_PinAnswer SendOutputFile;
+        [Microsoft.XLANGs.BaseTypes.PhysicalBinding("FILE", "C:\\Projet\\SAPOUT\\PinControl*.csv", typeof(Messaging.ReceivePinControl))]
+        port implements PortPinControl ReceivePinControlFile;
+        correlation CorrelationType_1 Correlation_1;
+        message UserIDPin Message_UserIDPin;
+        message PinControl Message_PinControl;
+        message PinAnswer Message_PinAnswer;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("4fac88e1-053e-4b1e-a064-47c98d26fc42")]
+            parallel
+            {
+                task
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("88728781-5dc0-48d0-9a1c-5616887e4b3e")]
+                    activate receive (ReceiveUserIDPinFile.Operation_UserIDPin, Message_UserIDPin, initialize Correlation_1);
+                }
+                task
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("c463deb3-8722-4b9e-aa53-96491e643c77")]
+                    activate receive (ReceivePinControlFile.Operation_PinControl, Message_PinControl, initialize Correlation_1);
+                }
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("b053442d-0efe-4446-bb96-130b6eaa5fd4")]
+            scope
+            {
+                body
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("d50fc5d2-2cf0-4fcd-abd1-fb33540fbf99")]
+                    construct Message_PinAnswer
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("07782770-2cb6-422b-8480-efc8f59ebca5")]
+                        transform (Message_PinAnswer) = Messaging.Transform_PinComparaison (Message_PinControl, Message_UserIDPin);
+                    }
+                }
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("3dae92ba-08f1-4c9d-93bc-96c982b8a1c0")]
+            send (SendOutputFile.Operation_PinAnswer, Message_PinAnswer);
+        }
+    }
+}
+

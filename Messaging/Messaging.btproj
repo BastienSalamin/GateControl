@@ -69,12 +69,70 @@
       <Name>Microsoft.XLANGs.BaseTypes</Name>
       <Private>False</Private>
     </Reference>
+    <Reference Include="WinSCPnet, Version=1.2.10.6257, Culture=neutral, PublicKeyToken=2271ec4a3c56d0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinSCP.5.7.7\lib\WinSCPnet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="WinSCP.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+    <Pipeline Include="ReceivePinControl.btp">
+      <TypeName>ReceivePinControl</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </Pipeline>
+    <Schema Include="PropertySchema.xsd">
+      <TypeName>PropertySchema</TypeName>
+      <Namespace>Messaging.PropertySchema</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Pipeline Include="SendPinAnswer.btp">
+      <TypeName>SendPinAnswer</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </Pipeline>
+    <Pipeline Include="ReceiveUserIDPin.btp">
+      <TypeName>ReceiveUserIDPin</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </Pipeline>
+    <Map Include="Transform_PinComparaison.btm">
+      <TypeName>Transform_PinComparaison</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <XLang Include="PinComparaison.odx">
+      <TypeName>PinComparaison</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <Schema Include="PinAnswer.xsd">
+      <TypeName>PinAnswer</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="PinControl.xsd">
+      <TypeName>PinControl</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Pipeline Include="SendWorkTime.btp">
+      <TypeName>SendWorkTime</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </Pipeline>
+    <Pipeline Include="ReceiveDemandeHeure.btp">
+      <TypeName>ReceiveDemandeHeure</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </Pipeline>
     <Schema Include="WorkTime.xsd">
       <TypeName>WorkTime</TypeName>
       <Namespace>Messaging</Namespace>
@@ -140,7 +198,7 @@
       <Namespace>Messaging</Namespace>
       <SubType>Task</SubType>
     </Schema>
-    <Map Include="DemandeHeure _to_WorkTime.btm">
+    <Map Include="DemandeHeure_to_WorkTime.btm">
       <TypeName>DemandeHeure_to_WorkTime</TypeName>
       <Namespace>Messaging</Namespace>
       <SubType>Task</SubType>

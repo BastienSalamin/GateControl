@@ -7,8 +7,10 @@ namespace Messaging {
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [SchemaType(SchemaTypeEnum.Document)]
     [Schema(@"http://Messaging.UserIDPin",@"UserIDPin")]
+    [Microsoft.XLANGs.BaseTypes.PropertyAttribute(typeof(global::Messaging.PropertySchema.UID), XPath = @"/*[local-name()='UserIDPin' and namespace-uri()='http://Messaging.UserIDPin']/*[local-name()='UserIDPinDetail' and namespace-uri()='']/*[local-name()='UID' and namespace-uri()='']", XsdType = @"int")]
     [System.SerializableAttribute()]
     [SchemaRoots(new string[] {@"UserIDPin"})]
+    [Microsoft.XLANGs.BaseTypes.SchemaReference(@"Messaging.PropertySchema.PropertySchema", typeof(global::Messaging.PropertySchema.PropertySchema))]
     public sealed class UserIDPin : Microsoft.XLANGs.BaseTypes.SchemaBase {
         
         [System.NonSerializedAttribute()]
@@ -16,17 +18,23 @@ namespace Messaging {
         
         [System.NonSerializedAttribute()]
         private const string _strSchema = @"<?xml version=""1.0"" encoding=""utf-16""?>
-<xs:schema xmlns=""http://Messaging.UserIDPin"" xmlns:b=""http://schemas.microsoft.com/BizTalk/2003"" targetNamespace=""http://Messaging.UserIDPin"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"">
+<xs:schema xmlns=""http://Messaging.UserIDPin"" xmlns:b=""http://schemas.microsoft.com/BizTalk/2003"" xmlns:ns0=""https://Messaging.PropertySchema"" targetNamespace=""http://Messaging.UserIDPin"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"">
   <xs:annotation>
     <xs:appinfo>
       <schemaEditorExtension:schemaInfo namespaceAlias=""b"" extensionClass=""Microsoft.BizTalk.FlatFileExtension.FlatFileExtension"" standardName=""Flat File"" xmlns:schemaEditorExtension=""http://schemas.microsoft.com/BizTalk/2003/SchemaEditorExtensions"" />
       <b:schemaInfo standard=""Flat File"" codepage=""65001"" default_pad_char="" "" pad_char_type=""char"" count_positions_by_byte=""false"" parser_optimization=""speed"" lookahead_depth=""3"" suppress_empty_nodes=""false"" generate_empty_nodes=""true"" allow_early_termination=""false"" early_terminate_optional_fields=""false"" allow_message_breakup_of_infix_root=""false"" compile_parse_tables=""false"" root_reference=""UserIDPin"" />
+      <b:imports>
+        <b:namespace prefix=""ns0"" uri=""https://Messaging.PropertySchema"" location=""Messaging.PropertySchema.PropertySchema"" />
+      </b:imports>
     </xs:appinfo>
   </xs:annotation>
   <xs:element name=""UserIDPin"">
     <xs:annotation>
       <xs:appinfo>
         <b:recordInfo structure=""delimited"" child_delimiter_type=""hex"" child_delimiter=""0xD 0xA"" child_order=""postfix"" sequence_number=""1"" preserve_delimiter_for_empty_data=""true"" suppress_trailing_delimiters=""false"" />
+        <b:properties>
+          <b:property name=""ns0:UID"" xpath=""/*[local-name()='UserIDPin' and namespace-uri()='http://Messaging.UserIDPin']/*[local-name()='UserIDPinDetail' and namespace-uri()='']/*[local-name()='UID' and namespace-uri()='']"" />
+        </b:properties>
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
