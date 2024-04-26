@@ -35,7 +35,7 @@ namespace Messaging
 "ID=\"4\" Name=\"ResolveParty\" minOccurs=\"0\" maxOccurs=\"-1\" execMethod=\"All\" stageId=\"9d0e410e-4cce-4536"+
 "-83fa-4a5040674ad6\" />      <Components />    </Stage>  </Stages></Document>";
         
-        private const string _versionDependentGuid = "0acf7857-1a2e-4045-839f-5650254cae36";
+        private const string _versionDependentGuid = "aaa1d851-09c8-4e71-a867-718963731139";
         
         public ReceiveStartBadgeMaker()
         {

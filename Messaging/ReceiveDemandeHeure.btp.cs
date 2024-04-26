@@ -35,7 +35,7 @@ namespace Messaging
 "\"4\" Name=\"ResolveParty\" minOccurs=\"0\" maxOccurs=\"-1\" execMethod=\"All\" stageId=\"9d0e410e-4cce-4536-83"+
 "fa-4a5040674ad6\" />      <Components />    </Stage>  </Stages></Document>";
         
-        private const string _versionDependentGuid = "51f5b6dc-0393-4ebf-a51a-3e2f5078df5c";
+        private const string _versionDependentGuid = "72b1e463-7c7a-4a73-8451-ce0afb1d0246";
         
         public ReceiveDemandeHeure()
         {

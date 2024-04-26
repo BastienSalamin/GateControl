@@ -20,24 +20,29 @@ namespace Messaging {
         <UID>
           <xsl:value-of select=""UID/text()"" />
         </UID>
-        <xsl:variable name=""var:v2"" select=""ScriptNS0:DBLookup(0 , string($var:v1) , &quot;Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False; Initial Catalog=AdvWorks;Data Source=(local) &quot; , &quot;WorkTime&quot; , &quot;UID&quot;)"" />
+        <xsl:variable name=""var:v2"" select=""ScriptNS0:DBLookup(0 , string($var:v1) , &quot;Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False; Initial Catalog=AdvWorks;Data Source=(local)&quot; , &quot;WorkTime&quot; , &quot;UID&quot;)"" />
         <xsl:variable name=""var:v3"" select=""ScriptNS0:DBValueExtract(string($var:v2) , &quot;Date&quot;)"" />
         <Date>
           <xsl:value-of select=""$var:v3"" />
         </Date>
-        <xsl:variable name=""var:v6"" select=""ScriptNS0:DBLookup(0 , string($var:v5) , &quot;Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False; Initial Catalog=AdvWorks;Data Source=(local) &quot; , &quot;WorkTime&quot; , &quot;UID&quot;)"" />
+        <xsl:variable name=""var:v6"" select=""ScriptNS0:DBLookup(0 , string($var:v5) , &quot;Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False; Initial Catalog=AdvWorks;Data Source=(local)&quot; , &quot;WorkTime&quot; , &quot;UID&quot;)"" />
         <xsl:variable name=""var:v7"" select=""ScriptNS0:DBValueExtract(string($var:v6) , &quot;StartHour&quot;)"" />
         <StartHour>
           <xsl:value-of select=""$var:v7"" />
         </StartHour>
-        <xsl:variable name=""var:v8"" select=""ScriptNS0:DBLookup(0 , string($var:v5) , &quot;Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False; Initial Catalog=AdvWorks;Data Source=(local) &quot; , &quot;WorkTime&quot; , &quot;UID&quot;)"" />
+        <xsl:variable name=""var:v8"" select=""ScriptNS0:DBLookup(0 , string($var:v5) , &quot;Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False; Initial Catalog=AdvWorks;Data Source=(local)&quot; , &quot;WorkTime&quot; , &quot;UID&quot;)"" />
         <xsl:variable name=""var:v9"" select=""ScriptNS0:DBValueExtract(string($var:v8) , &quot;EndHour&quot;)"" />
         <EndHour>
           <xsl:value-of select=""$var:v9"" />
         </EndHour>
+        <xsl:variable name=""var:v10"" select=""ScriptNS0:DBLookup(0 , string($var:v5) , &quot;Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False; Initial Catalog=AdvWorks;Data Source=(local)&quot; , &quot;WorkTime&quot; , &quot;UID&quot;)"" />
+        <xsl:variable name=""var:v11"" select=""ScriptNS0:DBValueExtract(string($var:v10) , &quot;Salle&quot;)"" />
+        <DefaultAccessRights>
+          <xsl:value-of select=""$var:v11"" />
+        </DefaultAccessRights>
       </WorkTimeDetail>
     </ns0:WorkTime>
-    <xsl:variable name=""var:v10"" select=""ScriptNS0:DBLookupShutdown()"" />
+    <xsl:variable name=""var:v12"" select=""ScriptNS0:DBLookupShutdown()"" />
   </xsl:template>
   <msxsl:script language=""C#"" implements-prefix=""userCSharp""><![CDATA[
 public string StringUpperCase(string str)

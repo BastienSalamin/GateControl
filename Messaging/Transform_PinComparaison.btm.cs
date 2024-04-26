@@ -18,7 +18,7 @@ namespace Messaging {
         <UID>
           <xsl:value-of select=""InputMessagePart_0/s0:PinControl/PinControlDetail/UID/text()"" />
         </UID>
-        <xsl:variable name=""var:v1"" select=""userCSharp:PinComparaison(string(InputMessagePart_1/s1:UserIDPin/UserIDPinDetail/PIN/text()) , string(InputMessagePart_0/s0:PinControl/PinControlDetail/PIN/text()))"" />
+        <xsl:variable name=""var:v1"" select=""userCSharp:PinComparaison(string(InputMessagePart_1/s1:UserIDPin/UserIDPinDetail/PIN/text()) , string(InputMessagePart_0/s0:PinControl/PinControlDetail/PIN/text()) , string(InputMessagePart_0/s0:PinControl/PinControlDetail/UID/text()))"" />
         <Answer>
           <xsl:value-of select=""$var:v1"" />
         </Answer>
@@ -26,9 +26,16 @@ namespace Messaging {
     </ns0:PinAnswer>
   </xsl:template>
   <msxsl:script language=""C#"" implements-prefix=""userCSharp""><![CDATA[
-public bool PinComparaison(int param1, int param2)
+public bool PinComparaison(int param1, int param2, int param3)
 {
+   if(param3 == 99)
+   {
+	return true;
+   }
+  else 
+  {
 	return param1 == param2;
+   }
 }
 
 

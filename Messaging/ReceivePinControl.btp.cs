@@ -35,7 +35,7 @@ namespace Messaging
 "\" Name=\"ResolveParty\" minOccurs=\"0\" maxOccurs=\"-1\" execMethod=\"All\" stageId=\"9d0e410e-4cce-4536-83fa"+
 "-4a5040674ad6\" />      <Components />    </Stage>  </Stages></Document>";
         
-        private const string _versionDependentGuid = "0221555e-928d-4b7d-b19e-348454eb96b1";
+        private const string _versionDependentGuid = "4e4d4976-cf50-4e75-93e4-ea79e17176c3";
         
         public ReceivePinControl()
         {

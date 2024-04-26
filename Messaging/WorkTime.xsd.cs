@@ -77,6 +77,13 @@ namespace Messaging {
                   </xs:appinfo>
                 </xs:annotation>
               </xs:element>
+              <xs:element name=""DefaultAccessRights"" type=""xs:string"">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:fieldInfo justification=""left"" sequence_number=""5"" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

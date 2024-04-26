@@ -34,7 +34,7 @@ namespace Messaging
 "d=\"All\" stageId=\"9d0e4108-4cce-4536-83fa-4a5040674ad6\" />      <Components />    </Stage>  </Stages>"+
 "</Document>";
         
-        private const string _versionDependentGuid = "2a622cd3-1cc5-4a22-8752-40c17d621b42";
+        private const string _versionDependentGuid = "363e56db-01fe-496a-9893-6c6b24f0dab0";
         
         public SendUserID()
         {

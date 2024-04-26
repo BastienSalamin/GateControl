@@ -34,7 +34,7 @@ namespace Messaging
 "hod=\"All\" stageId=\"9d0e4108-4cce-4536-83fa-4a5040674ad6\" />      <Components />    </Stage>  </Stage"+
 "s></Document>";
         
-        private const string _versionDependentGuid = "899fde22-c2ae-4515-a409-a9d828a34cde";
+        private const string _versionDependentGuid = "e1284687-79b9-4405-9075-24414c9d6a9e";
         
         public SendWorkTime()
         {

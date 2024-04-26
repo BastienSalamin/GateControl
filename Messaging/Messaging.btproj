@@ -79,10 +79,20 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Map Include="DemandeHeure_to_WorkTime.btm">
+      <TypeName>DemandeHeure_to_WorkTime</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </Map>
     <Content Include="WinSCP.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="packages.config" />
+    <Schema Include="WorkTime.xsd">
+      <TypeName>WorkTime</TypeName>
+      <Namespace>Messaging</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
     <Pipeline Include="ReceivePinControl.btp">
       <TypeName>ReceivePinControl</TypeName>
       <Namespace>Messaging</Namespace>
@@ -133,11 +143,6 @@
       <Namespace>Messaging</Namespace>
       <SubType>Task</SubType>
     </Pipeline>
-    <Schema Include="WorkTime.xsd">
-      <TypeName>WorkTime</TypeName>
-      <Namespace>Messaging</Namespace>
-      <SubType>Task</SubType>
-    </Schema>
     <Pipeline Include="SendUserIDPin.btp">
       <TypeName>SendUserIDPin</TypeName>
       <Namespace>Messaging</Namespace>
@@ -198,11 +203,6 @@
       <Namespace>Messaging</Namespace>
       <SubType>Task</SubType>
     </Schema>
-    <Map Include="DemandeHeure_to_WorkTime.btm">
-      <TypeName>DemandeHeure_to_WorkTime</TypeName>
-      <Namespace>Messaging</Namespace>
-      <SubType>Task</SubType>
-    </Map>
     <Content Include="Messages\startBadgeMaker.txt" />
     <Schema Include="DemandeHeure.xsd">
       <TypeName>DemandeHeure</TypeName>
